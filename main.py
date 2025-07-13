@@ -70,7 +70,7 @@ ANIMAL_APIS = {
 
 # Test for frontend 
 @app.get("/", response_class=FileResponse)
-async def read_root():
+def read_root():
     return "static/index.html"
 
 # Endpoints 
@@ -86,7 +86,7 @@ def fetch_and_save_pictures(animal_type: str, num_pictures: int, db: Session = D
     if animal_type not in ANIMAL_APIS:
         raise HTTPException(status_code=400, detail="Invalid animal.")
 
-    # fetch at least one picture, don't spam the server 
+    # fetch at least one picture, not more than ten at once 
     if not (1 <= num_pictures <= 10):
         raise HTTPException(status_code=400, detail="Number of pictures must be between 1 and 10.")
 
@@ -106,7 +106,7 @@ def fetch_and_save_pictures(animal_type: str, num_pictures: int, db: Session = D
             response.raise_for_status()
 
             if animal_type == 'fox':
-                final_url = response.json()['image'] # get 'image' key from JSON-response
+                final_url = response.json()['image'] # get 'image' from JSON-response
             else:
                 final_url = response.url # URL from dog/bear 
 
