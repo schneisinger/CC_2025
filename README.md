@@ -1,4 +1,4 @@
-# CC_2025 - Animal Picrtue App 
+# CC_2025 - Animal Picture App 
 
 Description 
 A simple microservice, that fetches a random picture of a fox, a dog, or a bear, and saves it to a database. The last picture can be shown on a simple UI.  
@@ -16,7 +16,7 @@ How to run it
 - Running locally 
     1. Create a virtual environment in the project directory: 
         python3 -m venv env
-    2. Acttvate the venv: 
+    2. Activate the venv: 
         source env/bin/activate
     3. Install dependencies: 
         pip install -r dependencies.txt
