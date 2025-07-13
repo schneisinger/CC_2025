@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Picture App</title>
+    <style>
+        body { max-width: 600px; margin: auto; padding: 2em; }
+        img { max-width: 100%; height: auto; margin-top: 1em; border: 1px solid #ccc; }
+        pre { background-color: #f4f4f4; padding: 1em; border-radius: 4px; }
+        button { margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Animal Picture App</h1>
+    
+    <label for="animal-select">Choose animal:</label>
+    <select id="animal-select">
+        <option value="fox">Fox</option>
+        <option value="dog">Dog</option>
+        <option value="bear">Bear</option>
+    </select>
+
+    <label for="num-pictures-input">Number to fetch:</label>
+    <input type="number" id="num-pictures-input" value="3" min="1" max="10">
+    <br><br>
+    
+    <button id="get-last-btn">Show Latest Picture</button>
+    <button id="fetch-new-btn">Fetch New Picture(s)</button>
+
+    <hr>
+
+    <h2>Result</h2>
+    <img id="result-image" src="" alt="Animal picture will be shown here">
+    <pre id="result-data"></pre>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
