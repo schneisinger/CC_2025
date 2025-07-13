@@ -4,9 +4,9 @@
 
 A simple microservice, that fetches a random picture of a fox, a dog, or a bear, and saves it to a database. The last picture can be shown on a simple UI.  
 The App is using the follwing external APIs: 
-*Fox: https://randomfox.ca/floof/ 
-*Dogs: https://place.dog/300/200 
-*Bear: https://placebear.com/200/300 
+* Fox: https://randomfox.ca/floof/ 
+* Dogs: https://place.dog/300/200 
+* Bear: https://placebear.com/200/300 
 
 ## How to run it
 - Using Docker 
